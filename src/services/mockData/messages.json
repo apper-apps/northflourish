@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "senderId": "sarah-johnson",
+    "receiverId": "1",
+    "senderName": "Sarah Johnson",
+    "content": "Hi Emma! How did your morning meditation practice go today?",
+    "timestamp": "2024-12-14T09:30:00Z",
+    "read": true,
+    "type": "text"
+  },
+  {
+    "Id": 2,
+    "senderId": "1",
+    "receiverId": "sarah-johnson",
+    "senderName": "Emma Thompson",
+    "content": "Good morning! I managed 8 minutes today and felt much more centered. The breathing technique you taught me really helps.",
+    "timestamp": "2024-12-14T10:15:00Z",
+    "read": true,
+    "type": "text"
+  },
+  {
+    "Id": 3,
+    "senderId": "sarah-johnson",
+    "receiverId": "1",
+    "senderName": "Sarah Johnson",
+    "content": "That's wonderful progress! Building up gradually is exactly the right approach. See you at our session tomorrow.",
+    "timestamp": "2024-12-14T10:45:00Z",
+    "read": true,
+    "type": "text"
+  },
+  {
+    "Id": 4,
+    "senderId": "2",
+    "receiverId": "sarah-johnson",
+    "senderName": "Michael Chen",
+    "content": "Hi Sarah, I wanted to update you on my job applications. I've applied to three wellness companies this week!",
+    "timestamp": "2024-12-14T14:20:00Z",
+    "read": false,
+    "type": "text"
+  },
+  {
+    "Id": 5,
+    "senderId": "sarah-johnson",
+    "receiverId": "2",
+    "senderName": "Sarah Johnson",
+    "content": "That's fantastic news, Michael! Your confidence has really grown. How are you feeling about the transition?",
+    "timestamp": "2024-12-14T15:00:00Z",
+    "read": false,
+    "type": "text"
+  },
+  {
+    "Id": 6,
+    "senderId": "3",
+    "receiverId": "sarah-johnson",
+    "senderName": "Sarah Williams",
+    "content": "Thank you for the energy clearing session yesterday. I felt such a shift! My sleep was so much better last night.",
+    "timestamp": "2024-12-14T08:45:00Z",
+    "read": true,
+    "type": "text"
+  },
+  {
+    "Id": 7,
+    "senderId": "sarah-johnson",
+    "receiverId": "4",
+    "senderName": "Sarah Johnson",
+    "content": "David, congratulations on hitting your fitness milestone! Your dedication is truly inspiring.",
+    "timestamp": "2024-12-14T16:30:00Z",
+    "read": false,
+    "type": "text"
+  },
+  {
+    "Id": 8,
+    "senderId": "5",
+    "receiverId": "sarah-johnson",
+    "senderName": "Lisa Park",
+    "content": "I'm really looking forward to our first session next week. I've filled out the intake form you sent.",
+    "timestamp": "2024-12-14T12:00:00Z",
+    "read": false,
+    "type": "text"
+  }
+]

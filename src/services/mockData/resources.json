@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "title": "5-Minute Morning Meditation",
+    "type": "video",
+    "category": "Mindfulness",
+    "description": "Start your day with presence and intention through this guided morning meditation practice.",
+    "content": "A gentle guided meditation to center yourself and set positive intentions for the day ahead.",
+    "mediaUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=225&fit=crop",
+    "duration": "5 minutes",
+    "createdBy": "Sarah Johnson",
+    "tags": ["meditation", "morning", "mindfulness"],
+    "difficulty": "Beginner",
+    "createdAt": "2024-11-01T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Stress Management Techniques",
+    "type": "article",
+    "category": "Wellness",
+    "description": "Evidence-based strategies for managing stress and building resilience in daily life.",
+    "content": "Learn practical techniques including breathing exercises, progressive muscle relaxation, and cognitive reframing.",
+    "mediaUrl": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=225&fit=crop",
+    "readTime": "8 minutes",
+    "createdBy": "Sarah Johnson",
+    "tags": ["stress", "management", "wellness"],
+    "difficulty": "Intermediate",
+    "createdAt": "2024-11-05T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Goal Setting Worksheet",
+    "type": "worksheet",
+    "category": "Personal Growth",
+    "description": "A comprehensive worksheet to help you set SMART goals and create actionable plans.",
+    "content": "Interactive worksheet with prompts for vision clarification, goal setting, and progress tracking.",
+    "mediaUrl": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=225&fit=crop",
+    "downloadable": true,
+    "createdBy": "Sarah Johnson",
+    "tags": ["goals", "planning", "growth"],
+    "difficulty": "Beginner",
+    "createdAt": "2024-11-10T11:15:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Chakra Balancing Journey",
+    "type": "audio",
+    "category": "Energy Healing",
+    "description": "A 20-minute guided journey through the seven chakras for balance and alignment.",
+    "content": "Experience deep relaxation while harmonizing your energy centers through visualization and sound healing.",
+    "mediaUrl": "https://images.unsplash.com/photo-1545389336-cf090694435e?w=400&h=225&fit=crop",
+    "duration": "20 minutes",
+    "createdBy": "Sarah Johnson",
+    "tags": ["chakra", "energy", "healing"],
+    "difficulty": "Intermediate",
+    "createdAt": "2024-11-15T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Healthy Habit Tracker",
+    "type": "worksheet",
+    "category": "Wellness",
+    "description": "Track your daily wellness habits and build consistency in your self-care routine.",
+    "content": "Printable habit tracker with space for 10 daily habits over 30 days, plus reflection prompts.",
+    "mediaUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=225&fit=crop",
+    "downloadable": true,
+    "createdBy": "Sarah Johnson",
+    "tags": ["habits", "tracking", "wellness"],
+    "difficulty": "Beginner",
+    "createdAt": "2024-11-20T10:20:00Z"
+  }
+]

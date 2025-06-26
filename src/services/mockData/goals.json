@@ -1,0 +1,127 @@
+[
+  {
+    "Id": 1,
+    "clientId": "1",
+    "title": "Daily Meditation Practice",
+    "description": "Establish a consistent 10-minute daily meditation practice",
+    "category": "Mindfulness",
+    "targetDate": "2024-12-31",
+    "progress": 75,
+    "status": "in-progress",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Complete 7 consecutive days",
+        "completed": true,
+        "completedDate": "2024-11-20"
+      },
+      {
+        "id": 2,
+        "title": "Reach 30-day streak",
+        "completed": false,
+        "targetDate": "2024-12-15"
+      }
+    ],
+    "createdAt": "2024-11-01T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "clientId": "1",
+    "title": "Stress Level Reduction",
+    "description": "Reduce daily stress levels from 8/10 to 5/10 using learned techniques",
+    "category": "Wellness",
+    "targetDate": "2025-01-15",
+    "progress": 60,
+    "status": "in-progress",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Learn 3 stress management techniques",
+        "completed": true,
+        "completedDate": "2024-11-25"
+      },
+      {
+        "id": 2,
+        "title": "Practice techniques daily for 2 weeks",
+        "completed": false,
+        "targetDate": "2024-12-10"
+      }
+    ],
+    "createdAt": "2024-11-05T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "clientId": "2",
+    "title": "Career Transition",
+    "description": "Successfully transition from finance to wellness coaching",
+    "category": "Career",
+    "targetDate": "2025-03-01",
+    "progress": 40,
+    "status": "in-progress",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Complete coaching certification",
+        "completed": false,
+        "targetDate": "2025-01-15"
+      },
+      {
+        "id": 2,
+        "title": "Build portfolio of 5 practice clients",
+        "completed": false,
+        "targetDate": "2025-02-15"
+      }
+    ],
+    "createdAt": "2024-10-15T11:00:00Z"
+  },
+  {
+    "Id": 4,
+    "clientId": "3",
+    "title": "Energy Balance",
+    "description": "Achieve consistent energy levels throughout the day",
+    "category": "Energy Healing",
+    "targetDate": "2024-12-30",
+    "progress": 55,
+    "status": "in-progress",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Complete initial energy assessment",
+        "completed": true,
+        "completedDate": "2024-11-18"
+      },
+      {
+        "id": 2,
+        "title": "Practice daily energy clearing",
+        "completed": false,
+        "targetDate": "2024-12-20"
+      }
+    ],
+    "createdAt": "2024-11-12T15:30:00Z"
+  },
+  {
+    "Id": 5,
+    "clientId": "3",
+    "title": "Emotional Resilience",
+    "description": "Develop tools for emotional regulation and resilience",
+    "category": "Personal Growth",
+    "targetDate": "2025-02-28",
+    "progress": 25,
+    "status": "in-progress",
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Identify emotional triggers",
+        "completed": false,
+        "targetDate": "2024-12-25"
+      },
+      {
+        "id": 2,
+        "title": "Master 3 regulation techniques",
+        "completed": false,
+        "targetDate": "2025-01-20"
+      }
+    ],
+    "createdAt": "2024-11-12T15:45:00Z"
+  }
+]
