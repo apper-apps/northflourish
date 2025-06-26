@@ -4,6 +4,7 @@ import Resources from '@/components/pages/Resources';
 import Messages from '@/components/pages/Messages';
 import Profile from '@/components/pages/Profile';
 import Recommendations from '@/components/pages/Recommendations';
+import MeetingConnections from '@/components/pages/MeetingConnections';
 export const routes = {
   dashboard: {
     id: 'dashboard',
@@ -43,9 +44,16 @@ component: Profile
   recommendations: {
     id: 'recommendations',
     label: 'Recommendations',
-    path: '/recommendations',
+path: '/recommendations',
     icon: 'Lightbulb',
     component: Recommendations
+  },
+  meetingConnections: {
+    id: 'meetingConnections',
+    label: 'Meeting Connections',
+    path: '/meeting-connections',
+    icon: 'Video',
+    component: MeetingConnections
   }
 };
 

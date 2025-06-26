@@ -50,8 +50,8 @@ const Sessions = () => {
     toast.warning(`Session cancelled: ${session.title}`);
   };
 
-  const handleScheduleNew = () => {
-    toast.info('Opening session scheduling form');
+const handleScheduleNew = () => {
+    toast.info('Opening session scheduling form with meeting platform selection');
   };
 
   const pageTransition = {

@@ -359,9 +359,12 @@ setSessions(sessionsData || []);
           {/* Quick Actions */}
           <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 border border-primary/10">
             <h3 className="font-heading font-semibold text-gray-900 mb-4">Quick Actions</h3>
-            <div className="space-y-3">
+<div className="space-y-3">
+              <Button variant="outline" className="w-full justify-start" icon="Video">
+                Join Next Meeting
+              </Button>
               <Button variant="outline" className="w-full justify-start" icon="Plus">
-                Schedule Session
+                Schedule Video Session
               </Button>
               <Button variant="outline" className="w-full justify-start" icon="Upload">
                 Add Resource
