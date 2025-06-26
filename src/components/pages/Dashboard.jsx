@@ -18,32 +18,34 @@ import sessionService from '@/services/api/sessionService';
 import resourceService from '@/services/api/resourceService';
 import goalService from '@/services/api/goalService';
 import messageService from '@/services/api/messageService';
-
+import recommendationService from '@/services/api/recommendationService';
 const Dashboard = () => {
   const [sessions, setSessions] = useState([]);
   const [resources, setResources] = useState([]);
   const [goals, setGoals] = useState([]);  
   const [messages, setMessages] = useState([]);
+  const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const loadDashboardData = async () => {
       setLoading(true);
       setError(null);
       
-      try {
-        const [sessionsData, resourcesData, goalsData, messagesData] = await Promise.all([
+try {
+        const [sessionsData, resourcesData, goalsData, messagesData, recommendationsData] = await Promise.all([
           sessionService.getAll(),
           resourceService.getAll(),
           goalService.getAll(),
-          messageService.getAll()
+          messageService.getAll(),
+          recommendationService.getPendingRecommendations()
         ]);
         
-        setSessions(sessionsData || []);
+setSessions(sessionsData || []);
         setResources(resourcesData || []);
         setGoals(goalsData || []);
         setMessages(messagesData || []);
+        setRecommendations(recommendationsData || []);
       } catch (err) {
         setError(err.message || 'Failed to load dashboard data');
         toast.error('Failed to load dashboard data');
@@ -299,6 +301,61 @@ const Dashboard = () => {
             )}
           </div>
 
+{/* Pending Recommendations */}
+          {recommendations.length > 0 && (
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-heading font-semibold text-gray-900">
+                  Pending Recommendations
+                </h2>
+                <Button variant="ghost" size="small" icon="Lightbulb">
+                  View All
+                </Button>
+              </div>
+              
+              <div className="space-y-3">
+                {recommendations.slice(0, 3).map((recommendation) => (
+                  <div key={recommendation.Id} className="bg-white rounded-lg border border-surface-200 p-4">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h3 className="font-medium text-gray-900 text-sm">
+                          {recommendation.resourceName}
+                        </h3>
+                        <p className="text-xs text-gray-600">
+                          For {recommendation.clientName}
+                        </p>
+                        <div className="flex items-center space-x-2 mt-2">
+                          <Badge variant="warning" size="small">
+                            Pending
+                          </Badge>
+                          <Badge variant="primary" size="small">
+                            Score: {recommendation.score}
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="flex space-x-1">
+                        <Button
+                          variant="ghost"
+                          size="small"
+                          icon="Check"
+                          onClick={() => toast.success('Recommendation accepted')}
+                          className="text-green-600 hover:bg-green-50"
+                        />
+                        <Button
+                          variant="ghost"
+                          size="small"
+                          icon="X"
+                          onClick={() => toast.info('Recommendation declined')}
+                          className="text-red-600 hover:bg-red-50"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Quick Actions */}
           <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 border border-primary/10">
             <h3 className="font-heading font-semibold text-gray-900 mb-4">Quick Actions</h3>
@@ -314,6 +371,9 @@ const Dashboard = () => {
               </Button>
               <Button variant="outline" className="w-full justify-start" icon="Target">
                 Create Goal
+              </Button>
+              <Button variant="outline" className="w-full justify-start" icon="Lightbulb">
+                Generate Recommendations
               </Button>
             </div>
           </div>

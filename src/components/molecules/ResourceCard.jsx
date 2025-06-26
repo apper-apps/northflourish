@@ -35,11 +35,14 @@ const ResourceCard = ({
       onClick={onClick}
       {...props}
     >
-      <div className="relative overflow-hidden">
+<div className="relative overflow-hidden">
         <img
-          src={resource.mediaUrl}
+          src={resource.mediaUrl || resource.media_url || '/api/placeholder/400/300'}
           alt={resource.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+          onError={(e) => {
+            e.target.src = '/api/placeholder/400/300';
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute top-3 left-3">
@@ -81,10 +84,9 @@ const ResourceCard = ({
               </Badge>
             )}
           </div>
-          
-          <div className="flex items-center text-xs text-gray-500">
+<div className="flex items-center text-xs text-gray-500">
             <ApperIcon name="User" className="w-3 h-3 mr-1" />
-            {resource.createdBy}
+            {resource.createdBy || resource.created_by || 'Unknown'}
           </div>
         </div>
       </div>

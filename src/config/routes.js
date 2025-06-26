@@ -3,7 +3,7 @@ import Sessions from '@/components/pages/Sessions';
 import Resources from '@/components/pages/Resources';
 import Messages from '@/components/pages/Messages';
 import Profile from '@/components/pages/Profile';
-
+import Recommendations from '@/components/pages/Recommendations';
 export const routes = {
   dashboard: {
     id: 'dashboard',
@@ -38,7 +38,14 @@ export const routes = {
     label: 'Profile',
     path: '/profile',
     icon: 'User',
-    component: Profile
+component: Profile
+  },
+  recommendations: {
+    id: 'recommendations',
+    label: 'Recommendations',
+    path: '/recommendations',
+    icon: 'Lightbulb',
+    component: Recommendations
   }
 };
 
