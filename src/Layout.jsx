@@ -1,13 +1,26 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import ApperIcon from '@/components/ApperIcon';
+import Button from '@/components/atoms/Button';
 import { routeArray } from '@/config/routes';
-
+import { AuthContext } from './App';
 const Layout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { logout } = useContext(AuthContext);
+  const { user } = useSelector((state) => state.user);
 
+  const handleLogout = async () => {
+    try {
+      await logout();
+      toast.success('Logged out successfully');
+    } catch (error) {
+      toast.error('Logout failed');
+    }
+  };
   const sidebarInitial = { x: '-100%' };
   const sidebarAnimate = { x: 0 };
   const sidebarTransition = { duration: 0.3, ease: 'easeOut' };
@@ -67,19 +80,28 @@ const Layout = () => {
             ))}
           </nav>
 
-          <div className="p-4 m-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl border border-primary/10">
+<div className="p-4 m-4 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl border border-primary/10">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <ApperIcon name="Heart" className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">Sarah Johnson</h3>
+                <h3 className="font-semibold text-gray-900">{user?.firstName || 'Sarah'} {user?.lastName || 'Johnson'}</h3>
                 <p className="text-sm text-gray-500">Wellness Coach</p>
               </div>
             </div>
-            <div className="text-xs text-gray-600">
+            <div className="text-xs text-gray-600 mb-3">
               "Your transformation journey starts with a single step."
             </div>
+            <Button
+              variant="ghost"
+              size="small"
+              icon="LogOut"
+              onClick={handleLogout}
+              className="w-full justify-start text-red-600 hover:bg-red-50"
+            >
+              Logout
+            </Button>
           </div>
         </aside>
 
@@ -117,8 +139,7 @@ const Layout = () => {
                   </button>
                 </div>
               </div>
-              
-              <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+<nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
                 {routeArray.map((route) => (
                   <NavLink
                     key={route.id}
@@ -137,6 +158,19 @@ const Layout = () => {
                   </NavLink>
                 ))}
               </nav>
+
+              {/* Mobile Logout */}
+              <div className="p-4 border-t border-surface-200">
+                <Button
+                  variant="ghost"
+                  size="small"
+                  icon="LogOut"
+                  onClick={handleLogout}
+                  className="w-full justify-start text-red-600 hover:bg-red-50"
+                >
+                  Logout
+                </Button>
+              </div>
             </motion.div>
           </>
         )}
